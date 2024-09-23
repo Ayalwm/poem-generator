@@ -1,0 +1,213 @@
+/* Reset some default styles for consistency across browsers */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    background: #1e1e1e;
+    border-radius: 20px;
+    box-shadow: 20px 20px 60px #141414, -20px -20px 60px #262626; /* Neumorphic effect */
+    padding: 50px 40px;
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .container:hover {
+    box-shadow: 25px 25px 70px #0f0f0f, -25px -25px 70px #2b2b2b;
+  }
+  
+  .header h1 {
+    font-size: 3em;
+    color: #bb86fc; /* Vibrant accent color */
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .header img {
+    width: 180px;
+    margin-bottom: 30px;
+    filter: brightness(0) invert(1); /* Adjust logo for dark background */
+  }
+  
+  .search-container {
+    background: #1e1e1e;
+    border-radius: 15px;
+    padding: 30px 25px;
+    box-shadow: inset 5px 5px 15px #141414, inset -5px -5px 15px #262626; /* Inner neumorphic effect */
+    margin-bottom: 30px;
+  }
+  
+  .search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .instructions {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #2c2c2c;
+    color: #e0e0e0;
+    font-size: 1em;
+    outline: none;
+    box-shadow: inset 3px 3px 6px #141414, inset -3px -3px 6px #262626;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .instructions::placeholder {
+    color: #757575;
+  }
+  
+  .instructions:focus {
+    background: #3a3a3a;
+    box-shadow: inset 2px 2px 4px #0f0f0f, inset -2px -2px 4px #3a3a3a;
+  }
+  
+  .btn {
+    margin-left: 15px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #bb86fc;
+    color: #1e1e1e;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px #141414, -5px -5px 15px #262626;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #d0a4fc;
+    transform: translateY(-3px);
+    box-shadow: 7px 7px 20px #141414, -7px -7px 20px #262626;
+  }
+  
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: 3px 3px 10px #141414, -3px -3px 10px #262626;
+  }
+  
+  .hint {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #a0a0a0;
+    text-align: left;
+  }
+  
+  .poem-container {
+    background: #1e1e1e;
+    border-radius: 15px;
+    padding: 30px 25px;
+    box-shadow: inset 5px 5px 15px #141414, inset -5px -5px 15px #262626;
+    margin-top: 20px;
+    border-left: 5px solid #bb86fc;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .poem {
+    font-size: 1.2em;
+    color: #e0e0e0;
+    white-space: pre-line;
+    line-height: 1.6;
+    font-family: 'Roboto Slab', serif;
+  }
+  
+  .footer {
+    font-size: 0.85em;
+    color: #757575;
+    margin-top: 30px;
+  }
+  
+  .footer a {
+    color: #bb86fc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer a:hover {
+    color: #d0a4fc;
+    text-decoration: underline;
+  }
+  
+  /* Neumorphic Scrollbar */
+  .poem-container::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .poem-container::-webkit-scrollbar-track {
+    background: #1e1e1e;
+  }
+  
+  .poem-container::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 4px;
+    border: 2px solid #1e1e1e;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 40px 30px;
+    }
+  
+    .header h1 {
+      font-size: 2.5em;
+    }
+  
+    .header img {
+      width: 150px;
+    }
+  
+    .search-container {
+      padding: 25px 20px;
+    }
+  
+    .instructions {
+      font-size: 0.95em;
+      padding: 12px 18px;
+    }
+  
+    .btn {
+      padding: 12px 20px;
+      font-size: 0.95em;
+    }
+  
+    .poem {
+      font-size: 1.1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .search-bar {
+      flex-direction: column;
+    }
+  
+    .btn {
+      margin-left: 0;
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+  
